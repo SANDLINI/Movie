@@ -36,7 +36,7 @@ export const Home = () => {
               <Box
                 key={movies.id}
                 sx={{
-                  width: "100%",
+                  width: {xs: '100%', sm:'80%', md:"70%", xxl:'100%'},
                   height: "auto",
                   m: "auto",
                   bgcolor: "black",

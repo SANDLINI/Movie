@@ -23,7 +23,13 @@ export const MovieDetail = () => {
 
   return (
     <>
-      <Box sx={{ width: "100%", height: "auto" }}>
+      <Box
+        sx={{
+          width: { xs: "100%", sm: "80%", md: "70%", xxl: "100%" },
+          m:'auto',
+          height: "auto",
+        }}
+      >
         <img
           style={{ width: "100%", height: "auto" }}
           src={`https://image.tmdb.org/t/p/original${
@@ -37,7 +43,7 @@ export const MovieDetail = () => {
           color: "white",
         }}
       >
-        <Box sx={{ width: {xs:'90%', md:'80%'}, m: "auto", pt:2 }}>
+        <Box sx={{ width: { xs: "90%", md: "80%" }, m: "auto", pt: 2 }}>
           <Box>
             {currentMovie ? (
               <Typography
