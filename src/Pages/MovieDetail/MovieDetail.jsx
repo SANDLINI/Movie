@@ -26,7 +26,7 @@ export const MovieDetail = () => {
       <Box
         sx={{
           width: { xs: "100%", sm: "80%", md: "70%", xxl: "100%" },
-          m:'auto',
+          m: "auto",
           height: "auto",
         }}
       >
@@ -45,49 +45,26 @@ export const MovieDetail = () => {
       >
         <Box sx={{ width: { xs: "90%", md: "80%" }, m: "auto", pt: 2 }}>
           <Box>
-            {currentMovie ? (
-              <Typography
-                variant="h4"
-                sx={{ fontWeight: "600", fontFamily: "Montserrat" }}
-              >
-                {currentMovie.original_title}
-              </Typography>
-            ) : (
-              ""
-            )}
+            <Typography
+              variant="h4"
+              sx={{ fontWeight: "600", fontFamily: "Montserrat" }}
+            >
+              {currentMovie.original_title}
+            </Typography>
           </Box>
           <Box>
-            {currentMovie ? (
-              <Typography>IMDB : {currentMovie.vote_average}</Typography>
-            ) : (
-              ""
-            )}
+            <Typography>IMDB : {currentMovie.vote_average}</Typography>
           </Box>
           <Box>
-            {currentMovie ? (
-              <Typography>
-                {" "}
-                Runtime : {currentMovie.runtime + " minutes"}
-              </Typography>
-            ) : (
-              ""
-            )}
+            <Typography>
+              Runtime : {currentMovie.runtime + " minutes"}
+            </Typography>
           </Box>
           <Box>
-            {currentMovie ? (
-              <Typography>
-                Release Date : {currentMovie.release_date}
-              </Typography>
-            ) : (
-              ""
-            )}
+            <Typography>Release Date : {currentMovie.release_date}</Typography>
           </Box>
           <Box>
-            {currentMovie ? (
-              <Typography>{currentMovie.overview}</Typography>
-            ) : (
-              ""
-            )}
+            <Typography>{currentMovie.overview}</Typography>
           </Box>
         </Box>
       </Box>

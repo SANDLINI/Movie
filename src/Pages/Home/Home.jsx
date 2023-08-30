@@ -1,9 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 import { MovieList } from "../../components/MovieList/MovieList";
+import StarIcon from "@mui/icons-material/Star";
 
 export const Home = () => {
   const [popularMovies, setPopulaMovies] = useState([]);
@@ -36,7 +37,7 @@ export const Home = () => {
               <Box
                 key={movies.id}
                 sx={{
-                  width: {xs: '100%', sm:'80%', md:"70%", xxl:'100%'},
+                  width: { xs: "100%", sm: "80%", md: "70%", xxl: "100%" },
                   height: "auto",
                   m: "auto",
                   bgcolor: "black",
@@ -66,32 +67,25 @@ export const Home = () => {
                   }}
                 >
                   <Box>
-                    {movies ? (
-                      <Typography
-                        variant="h4"
-                        sx={{ fontWeight: "600", fontFamily: "Montserrat" }}
-                      >
-                        {movies.original_title}
-                      </Typography>
-                    ) : (
-                      ""
-                    )}
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: "600", fontFamily: "Montserrat" }}
+                    >
+                      {movies.original_title}
+                    </Typography>
                   </Box>
                   <Box>
-                    {movies ? (
-                      <Typography variant="h6" sx={{ fontWeight: "600" }}>
-                        {movies.release_date}
-                      </Typography>
-                    ) : (
-                      ""
-                    )}
+                    <Typography variant="h6" sx={{ fontWeight: "600" }}>
+                      {movies.release_date}
+                    </Typography>
                   </Box>
-                  <Box>
-                    {movies ? (
+                  <Box sx={{display:"flex"}}>
+                    <span>
                       <Typography>IMDB : {movies.vote_average}</Typography>
-                    ) : (
-                      ""
-                    )}
+                    </span>
+                    <span>
+                      <StarIcon fontSize="small" />
+                    </span>
                   </Box>
                 </Box>
               </Box>
