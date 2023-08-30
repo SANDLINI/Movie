@@ -29,7 +29,6 @@ export const Home = () => {
           infiniteLoop={true}
           showStatus={false}
           showArrows={true}
-          swipeable={true}
           showIndicators={false}
         >
           {popularMovies.map((movies) => {
