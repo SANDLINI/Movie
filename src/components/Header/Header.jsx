@@ -31,7 +31,7 @@ export const Header = () => {
             >
               Top Rated
             </NavLink>
-            <NavLink to={"/movies/upcoming"} className={styles.a}>
+            <NavLink style={activeNavLink} to={"/movies/upcoming"} className={styles.a}>
               Upcoming
             </NavLink>
           </Toolbar>
